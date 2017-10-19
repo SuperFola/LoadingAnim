@@ -18,6 +18,7 @@ namespace sx
     private:
         int kind;
         float max_size;
+        int sides;
         float rotation;
         bool increasing;
         int outline_thickness;

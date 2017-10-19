@@ -6,6 +6,7 @@ namespace sx
     LoadingAnim::LoadingAnim(int k, float ms, int s) :
         kind(k)
         , max_size(ms)
+        , sides(s)
         , rotation(0.0f)
         , outline_thickness(10)
         , fill_color(Colors::purple)
@@ -74,7 +75,7 @@ namespace sx
                                        this->poly_shape.getRadius() / 2.0f - this->outline_thickness / 2.0f
                                        , this->poly_shape.getRadius() / 2.0f - this->outline_thickness / 2.0f
                                        );
-
+            this->poly_shape.rotate(this->rotation);
             break;
 
         default:

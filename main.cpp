@@ -9,6 +9,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(480, 480), "Animations");
     sx::LoadingAnim loam(sx::LoadingAnim::POLY, 96.0f, 10);
+    loam.setRotation(1.0f);
     sf::Time elapsed;
     sf::Clock clock;
 
@@ -41,12 +42,10 @@ int main()
                 else if (event.key.code == sf::Keyboard::S)
                 {
                     loam.setKind(sx::LoadingAnim::SQUARE);
-                    loam.setRotation(1.0f);
                 }
                 else if (event.key.code == sf::Keyboard::P)
                 {
                     loam.setKind(sx::LoadingAnim::POLY);
-                    loam.setRotation(1.0f);
                 }
             }
         }
